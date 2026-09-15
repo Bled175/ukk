@@ -1,0 +1,135 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --gajiku-border: #dce3ed;
+    --gajiku-text: #202b40;
+    --gajiku-muted: #5e6470;
+    --gajiku-accent: #c344ba;
+}
+
+.guest-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #ffffff;
+}
+
+.guest-card {
+    width: min(100%, 416px);
+    min-height: 362px;
+    padding: 31px 29px 30px;
+    border: 1px solid var(--gajiku-border);
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 9px 14px rgba(35, 50, 70, 0.1);
+}
+
+.login-title {
+    margin: 0 0 45px;
+    color: var(--gajiku-text);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.login-field {
+    position: relative;
+}
+
+.password-field {
+    margin-top: 16px;
+}
+
+.floating-label {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    z-index: 1;
+    padding: 0 2px;
+    color: var(--gajiku-muted);
+    background: #ffffff;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.login-input {
+    display: block;
+    width: 100%;
+    height: 43px;
+    padding: 8px 10px;
+    border: 1px solid #9898a0;
+    border-radius: 3px;
+    color: var(--gajiku-text);
+    background: #ffffff;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-input:focus {
+    border-color: var(--gajiku-accent);
+    box-shadow: 0 0 0 1px var(--gajiku-accent);
+}
+
+.login-error {
+    display: block;
+    margin-top: 5px;
+    color: #c24161;
+    font-size: 12px;
+}
+
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.forgot-link {
+    align-self: flex-end;
+    color: #087bd1;
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.login-button {
+    width: 157px;
+    height: 31px;
+    margin-top: 45px;
+    border: 0;
+    border-radius: 18px;
+    color: #ffffff;
+    background: var(--gajiku-accent);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+}
+
+.login-button:hover {
+    background: #ae37a6;
+}
+
+.session-status {
+    margin: -28px 0 16px;
+    color: #28794e;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .guest-page {
+        padding: 16px;
+    }
+
+    .guest-card {
+        padding-inline: 29px;
+    }
+}
